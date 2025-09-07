@@ -14,9 +14,36 @@ nav {
     box-shadow: 0 2px 7px rgba(0,0,0,0.04);
 }
 .logo {
+    display: flex;
     font-weight: bold;
     font-size: 1.8rem;
     color: #4656eb;
+}
+@keyframes lokup {
+  0% { bottom: 0; }
+  100% { bottom: 6px; }
+}
+
+@keyframes shikshadown {
+  0%  { top: 0; }
+  100% { top: 6px; }
+}
+.second-logo {
+  position: relative;
+  animation: lokup 0.5s ease-in-out forwards;
+  animation-iteration-count: 1;
+}
+
+.first-logo {
+  position: relative;
+  animation: shikshadown 0.5s ease-in-out forwards;
+  animation-iteration-count: 1;
+}
+.logo:hover .second-logo {
+  animation: lokup 0.5s ease-in-out backwards;
+}
+.logo:hover .first-logo{
+  animation: shikshadown 0.5s ease-in-out backwards;
 }
 nav ul {
     display: flex;
@@ -920,4 +947,19 @@ footer {
     color: #9499ac;
     font-size: 1.2rem;
     margin-top: 40px;
+}
+@media(max-width:1440px) {
+  .hero-img img {
+    scale: 1.4;
+    left: 54px;
+    position: relative;
+}
+.live-session{
+  top: -55px;
+  left: -60px;
+}
+.attendance{
+  top: 240px;
+  left: 473px;
+}
 }
