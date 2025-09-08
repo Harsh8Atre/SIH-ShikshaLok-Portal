@@ -948,18 +948,181 @@ footer {
     font-size: 1.2rem;
     margin-top: 40px;
 }
+
+/* Navigation Container */
+#hamburgerNav {
+  background-color: #4656eb;
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+  max-width: 54px;
+}
+
+/* Hamburger button */
+#hamburgerNav .menu-toggle {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hidden menu list by default */
+#hamburgerNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  background: #4657eba1;
+  position: absolute;
+  top: 46px;
+  left: -2px;
+  right: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 65px;
+  z-index: 100;
+}
+
+/* Show when toggled */
+#hamburgerNav ul.show {
+  display: block;
+}
+
+/* Menu items */
+#hamburgerNav ul li a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#hamburgerNav ul li a:hover {
+  background: #1abc9c;
+}
+
+.menu-toggle {
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  color: #2c3e50;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.01s ;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+
+@media(max-width: 2560px){
+  html{
+    font-size: 150%;
+  }
+  .logo, nav ul, .login, .get-started, .percentage, .role-card button, .platform-button{
+    font-size: 130%;
+  }
+  .attendance{
+    width: 104px;
+    height: 81px;
+    left: 580px;
+  }
+  .hero-img img{
+    position: relative;
+    right: -100px;
+  }
+  .live-session{
+    left: -94px;
+  }
+  #hamburgerNav{
+    display: none;
+  }
+}
 @media(max-width:1440px) {
+  html{
+    font-size: 100%;
+  }
+  nav ul, .login, .get-started, .percentage, .role-card button, .platform-button{
+    font-size: 100%;
+  }
   .hero-img img {
     scale: 1.4;
     left: 54px;
     position: relative;
 }
-.live-session{
-  top: -55px;
-  left: -60px;
+  .live-session{
+    top: -55px;
+    left: -60px;
 }
-.attendance{
-  top: 240px;
-  left: 473px;
+  .attendance{
+    top: 240px;
+    left: 473px;
 }
+}
+@media(max-width:1024px){
+  .hero-img img {
+    scale: 1.2;
+    left: 0px;
+    }
+  .hero-text{
+    width: 0;
+  }
+  .hero-text p{
+    width: 420px;
+  }
+  .attendance {
+    top: 226px;
+    left: 380px;
+    }
+}
+@media(max-width:768px){
+   nav{
+    padding: 22px 14px;
+   }
+   .logo{
+    font-size: 1.5rem;
+   }
+   nav ul{
+    font-size: 21px;
+    gap: 24px;
+   }
+   .login, .get-started{
+    font-size: 14px;
+   }
+   .hero{
+    flex-direction: column;
+   }
+   .hero-text{
+    width: auto;
+   }
+   .hero-img img{
+    top: 50px;
+   }
+   .live-session{
+    top: 15px;
+    left: -100px;
+   }
+  .attendance {
+    top: 266px;
+    left: 400px;
+    }
+  .smart-classroom{
+    flex-direction: column;
+    }
+  .feature-card{
+    flex-wrap: nowrap;
+  }
+}
+@media(max-width:550px){
+  #hamburgerNav{
+    display: block;
+  }
+  .logo{
+    font-size: 1rem;
+  }
+  nav ul{
+    display: none;
+  }
 }
