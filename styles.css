@@ -95,7 +95,7 @@ nav ul li a:hover {
     background: #f7f8fa;
 }
 .hero-text {
-    flex: 2;
+    flex: 1;
 }
 .badge {
     display: inline-block;
@@ -159,8 +159,8 @@ nav ul li a:hover {
 }
 .hero-img {
     position: relative;
-    flex: 1.4;
     margin-left: 34px;
+    right: 70px;
 }
 .hero-img img {
     width: 420px;
@@ -948,14 +948,93 @@ footer {
     font-size: 1.2rem;
     margin-top: 40px;
 }
-
-/* Navigation Container */
-#hamburgerNav {
+#hamburgerNav{
+  display: none;
+}
+@media(max-width: 2560px){
+  html{
+    font-size: 150%;
+  }
+  .logo, nav ul, .login, .get-started, .role-card button, .platform-button{
+    font-size: 130%;
+  }
+   .attendance{
+    width: 104px;
+    height: 81px;
+  }
+  #hamburgerNav{
+    display: none;
+  }
+}
+@media(max-width:1440px) {
+  html{
+    font-size: 100%;
+  }
+  nav ul, .login, .get-started, .percentage, .role-card button, .platform-button{
+    font-size: 100%;
+  }
+  .attendance{
+    width: 60px;
+    height: 64px;
+}
+}
+@media(max-width:1024px){
+  .hero-text{
+    width: 0;
+  }
+  .hero-text h1{
+    font-size: 2.2rem;
+  }
+  .hero-text p{
+    width: 420px;
+    font-size: 1rem;
+  }
+  .hero-img{
+    scale: 0.7;
+    left: 0px;
+  }
+}
+@media(max-width:768px){
+   nav{
+    padding: 22px 14px;
+   }
+   .logo{
+    font-size: 1.5rem;
+   }
+   nav ul{
+    font-size: 21px;
+    gap: 24px;
+   }
+   .login, .get-started{
+    font-size: 14px;
+   }
+   .hero{
+    flex-direction: column;
+   }
+   .hero-text{
+    width: auto;
+   }
+   .hero-img{
+    margin-top: 40px;
+   }
+  .smart-classroom{
+    flex-direction: column;
+    }
+  .feature-card{
+    flex-wrap: nowrap;
+  }
+}
+@media(max-width: 690px){
+  nav ul{
+    display: none;
+  }
+  #hamburgerNav {
   background-color: #4656eb;
   padding: 10px;
   position: relative;
   border-radius: 10px;
   max-width: 54px;
+  display: block;
 }
 
 /* Hamburger button */
@@ -1016,113 +1095,43 @@ footer {
 .arrow.rotate {
   transform: rotate(90deg);
 }
-
-@media(max-width: 2560px){
-  html{
-    font-size: 150%;
-  }
-  .logo, nav ul, .login, .get-started, .percentage, .role-card button, .platform-button{
-    font-size: 130%;
-  }
-  .attendance{
-    width: 104px;
-    height: 81px;
-    left: 580px;
-  }
-  .hero-img img{
-    position: relative;
-    right: -100px;
-  }
-  .live-session{
-    left: -94px;
-  }
-  #hamburgerNav{
-    display: none;
-  }
-}
-@media(max-width:1440px) {
-  html{
-    font-size: 100%;
-  }
-  nav ul, .login, .get-started, .percentage, .role-card button, .platform-button{
-    font-size: 100%;
-  }
-  .hero-img img {
-    scale: 1.4;
-    left: 54px;
-    position: relative;
-}
-  .live-session{
-    top: -55px;
-    left: -60px;
-}
-  .attendance{
-    top: 240px;
-    left: 473px;
-}
-}
-@media(max-width:1024px){
-  .hero-img img {
-    scale: 1.2;
-    left: 0px;
-    }
-  .hero-text{
-    width: 0;
-  }
-  .hero-text p{
-    width: 420px;
-  }
-  .attendance {
-    top: 226px;
-    left: 380px;
-    }
-}
-@media(max-width:768px){
-   nav{
-    padding: 22px 14px;
-   }
-   .logo{
-    font-size: 1.5rem;
-   }
-   nav ul{
-    font-size: 21px;
-    gap: 24px;
-   }
-   .login, .get-started{
-    font-size: 14px;
-   }
-   .hero{
-    flex-direction: column;
-   }
-   .hero-text{
-    width: auto;
-   }
-   .hero-img img{
-    top: 50px;
-   }
-   .live-session{
-    top: 15px;
-    left: -100px;
-   }
-  .attendance {
-    top: 266px;
-    left: 400px;
-    }
-  .smart-classroom{
-    flex-direction: column;
-    }
-  .feature-card{
-    flex-wrap: nowrap;
-  }
 }
 @media(max-width:550px){
-  #hamburgerNav{
-    display: block;
-  }
   .logo{
     font-size: 1rem;
   }
-  nav ul{
-    display: none;
+  .hero-img{
+    left: -25px;
+  }
+}
+@media(max-width: 528px){
+  .hero-img{
+    scale: 0.5;
+  }
+  .smart-img img{
+    scale: 0.9;
+  }
+}
+@media(max-width: 410px){
+  html{
+    font-size: 90%;
+  }
+  .hero-text h1, .hero-text p, .primary, .secondary{
+    margin-left: 10px;
+    font-size: 95%;
+  }
+  .hero-text h1{
+    font-size: 110%;
+  }
+}
+@media(max-width: 400px){
+  .hero-text h1, .hero-text p, .primary, .secondary{
+    width: 330px;
+  }
+  #hamburgerNav{
+    background: none;
+  }
+  #hamburgerNav .menu-toggle {
+    color: #000000;
   }
 }
