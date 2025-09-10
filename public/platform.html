@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShikshaLok Portal - Smart Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><div class="first-logo">Shiksha</div><div class="second-logo">Lok</div></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="hamburgerNav">
+            <div class="menu-toggle" id="menuToggle">
+                Home&nbsp;<span class="arrow">▸</span>
+            </div>
+            <ul id="menuList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-btns">
+            <button class="login">Login</button>
+            <button class="get-started">Get Started</button>
+        </div>
+    </nav>
+
+    <section class="live-class-info">
+        <div class="info">
+            <p><span>● Live Session&nbsp;&nbsp;</span>&nbsp;&nbsp;Physics - Chapter 5: Waves and Sound</p>
+        </div>
+        <div class="left">
+            <div class="duration">⏱&nbsp;&nbsp;7:45</div>
+            <div class="no-of-student">5 Students</div>
+        </div>
+    </section>
+
+    <section class="live-class">
+        <div class="live-video" style="background-image: url(online-teacher.jpg);">
+            <span class="live-video-text">Dr.Tanmay Shah - Physics professor</span>
+        </div>
+        <div class="student-monitor-card">
+  <h3>Student Monitor</h3>
+  <div class="student-list">
+    <div class="student-row">
+      <span class="status-dot online"></span>
+      <span class="student-name">Rahul Sharma</span>
+      <span class="time-ago">2 min ago</span>
+      <img src="location.png" class="student-location In">
+    </div>
+    <div class="student-row">
+      <span class="status-dot online"></span>
+      <span class="student-name">Priya Patel</span>
+      <span class="time-ago">1 min ago</span>
+      <img src="location.png" class="student-location In">
+    </div>
+    <div class="student-row">
+      <span class="status-dot away"></span>
+      <span class="student-name">Arjun Kumar</span>
+      <span class="time-ago">5 min ago</span>
+      <img src="location.png" class="student-location out">
+    </div>
+    <div class="student-row">
+      <span class="status-dot offline"></span>
+      <span class="student-name">Sneha Reddy</span>
+      <span class="time-ago">Just now</span>
+      <img src="location.png" class="student-location In">
+    </div>
+    <div class="student-row">
+      <span class="status-dot online"></span>
+      <span class="student-name">Vikram Singh</span>
+      <span class="time-ago">30 sec ago</span>
+      <img src="location.png" class="student-location In">
+    </div>
+  </div>
+</div>
+
+    </section>
+    
+    <section class="poll-and-alert">
+        <div class="poll-card">
+            <div class="poll-header">
+                📶
+                <span>Live Poll</span>
+            </div>
+            <div class="poll-question">
+                Are you following the current topic?
+            </div>
+            <div class="poll-options">
+                <div class="poll-option">
+                    <span>Yes, completely</span>
+                    <div class="poll-count">12</div>
+                </div>
+                <div class="poll-option">
+                    <span>Partially</span>
+                    <div class="poll-count">3</div>
+                </div>
+                <div class="poll-option">
+                    <span>Need clarification</span>
+                    <div class="poll-count">2</div>
+                </div>
+                <div class="poll-option">
+                    <span>No</span>
+                    <div class="poll-count">0</div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="alerts-card">
+            <div class="alerts-header">
+                <span class="alert-icon">&#9888;</span> <!-- Unicode warning sign, looks like your screenshot -->
+                <span>Alerts</span>
+            </div>
+            <div class="alert-list">
+                <div class="alert-box alert-warning">
+                    <span class="alert-name">Arjun Kumar</span><br>
+                    <span class="alert-status">Switched to another app</span><br>
+                    <span class="alert-time">2 min ago</span>
+                </div>
+                <div class="alert-box alert-error">
+                    <span class="alert-name">Sneha Reddy</span><br>
+                    <span class="alert-status">Location moved outside classroom</span><br>
+                    <span class="alert-time">5 min ago</span>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <section class="chats">
+  <div class="chat-card">
+    <div class="chat-header">
+      <span class="chat-icon">🗫</span>
+      <span>Ask Question</span>
+    </div>
+    <div class="chat-scroll">
+      <div class="chat-message">
+        <div class="chat-sender student">Priya Patel</div>
+        <div class="chat-text">Can you explain the wave interference concept again?</div>
+      </div>
+      <div class="chat-message">
+        <div class="chat-sender student">Rahul Sharma</div>
+        <div class="chat-text">I have doubt in numericals.</div>
+      </div>
+      <div class="chat-message faculty">
+        <div class="chat-sender faculty">Dr. Rajesh Gupta</div>
+        <div class="chat-text">Sure! Wave interference occurs when...</div>
+      </div>
+    </div>
+    <div class="chat-input-box">
+      <input type="text" placeholder="Type your question..." />
+      <button class="send-btn">
+        <img src="Chat-emoji.png" alt="Send" />
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+    &copy; 2025 ShikshaLok Platform. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
