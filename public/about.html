@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - ShikshaLok Portal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <nav>
-        <div class="logo"><div class="first-logo">Shiksha</div><div class="second-logo">Lok</div></div>
+        <div class="logo">
+            <div class="first-logo">Shiksha</div>
+            <div class="second-logo">Lok</div>
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -26,7 +29,7 @@
             </ul>
         </div>
         <div class="nav-btns">
-            <button class="login">Login</button>
+            <button class="login" onclick="toggleLoginPopup()">Login</button>
             <button class="get-started">Get Started</button>
         </div>
     </nav>
@@ -73,6 +76,60 @@
   <footer>
     &copy; 2025 ShikshaLok Platform. All rights reserved.
   </footer>
-<script src="script.js"></script>
+ <!-- Login Popup (Simple: Only Email + Password) -->
+    <div id="login-popup" class="login-popup hidden">
+        <div class="login-box">
+            <button class="close-btn" onclick="toggleLoginPopup()">×</button>
+            <h2 class="login-title">Login</h2>
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <input type="email" id="email" name="email" placeholder="Email" required />
+                <input type="password" id="password" name="password" placeholder="Password" required />
+                <button type="submit" class="login-submit">Login</button>
+            </form>
+            <p>
+                Don't have an account? 
+                <button type="button" id="showSignupBtn" class="link-button">Sign Up</button>
+            </p>
+        </div>
+    </div>
+
+    <!-- Signup Popup (Detailed signup with role selector and fields) -->
+    <div id="signup-popup" class="login-popup hidden">
+        <div class="login-box">
+            <button class="close-btn" onclick="toggleSignupPopup()">×</button>
+            <h2 class="login-title">Sign Up</h2>
+
+            <!-- Role selector buttons -->
+            <div id="signup-role-selector" style="display:flex; gap:10px; margin-bottom:15px;">
+                <button type="button" class="role-btn active" data-role="student">Student</button>
+                <button type="button" class="role-btn" data-role="faculty">Faculty</button>
+                <button type="button" class="role-btn" data-role="college_admin">College Admin</button>
+            </div>
+
+            <form id="signup-form">
+                <!-- Common fields -->
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <input type="text" name="collegeName" placeholder="College Name" required />
+                <input type="text" name="collegeCode" placeholder="College Code" required />
+
+                <!-- Student-specific -->
+                <input type="text" name="studentId" placeholder="Student ID" class="role-field student" />
+
+                <!-- Faculty-specific -->
+                <input type="text" name="employeeCode" placeholder="Employee Code" class="role-field faculty" style="display:none;" />
+
+                <!-- College Admin - no extra fields -->
+
+                <input type="hidden" name="role" value="student" />
+
+                <button type="submit" class="login-submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+
+<script src="js/script.js"></script>
 </body>
 </html>
