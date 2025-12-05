@@ -45,4 +45,16 @@ server.listen(PORT, () => {
   logger.info(`🔗 Frontend URL: ${process.env.FRONTEND_URL || 'http://localhost:3000'}`);
 });
 
+const publicPath = path.join(__dirname, '..', 'public'); // backend/server.js -> ../public
+app.use(express.static(publicPath));
+
+// For SPA single-page-apps: return index.html for all unknown GET routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
+
+// Use Render's port
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+
 module.exports = { server, io };
